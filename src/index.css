@@ -14,3 +14,14 @@ min-width: 20%;
   min-width: 30%;
   display: inline-block;
 }
+
+.fancy {
+  height: 50px;
+  text-transform: uppercase;
+  border-radius: 11px;
+  box-shadow: inset 20px 2px 3px 40px #aaa;
+  box-sizing: border-box;
+  border: 12px double #999;
+  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+}

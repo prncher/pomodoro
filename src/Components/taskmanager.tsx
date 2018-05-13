@@ -60,7 +60,7 @@ export class TaskManager extends React.Component<TaskProps, TaskManagerState> {
             <div>
                 <div><h3>Enter Task Details</h3></div>
                 <div><label className="label">Name</label>
-                    <input
+                    <input className="fancy"
                         type="text"
                         min={4}
                         max={30}
@@ -69,7 +69,7 @@ export class TaskManager extends React.Component<TaskProps, TaskManagerState> {
                     />
                 </div><div>
                     <label className="label">Description</label>
-                    <input
+                    <input className="fancy"
                         type="text"
                         min={10}
                         max={30}
@@ -77,7 +77,7 @@ export class TaskManager extends React.Component<TaskProps, TaskManagerState> {
                         onChange={(e) => { this.emptyTask.description = e.target.value; }}
                     /></div><div>
                     <label className="label">Duration (seconds)</label>
-                    <input
+                    <input className="fancy"
                         type="number"
                         min={25}
                         max={100}
@@ -85,7 +85,7 @@ export class TaskManager extends React.Component<TaskProps, TaskManagerState> {
                         onChange={(e) => { this.emptyTask.duration = parseInt(e.target.value, 10); }}
                     /></div><div>
                     <label className="label">Rounds</label>
-                    <input
+                    <input className="fancy"
                         type="number"
                         min={0}
                         max={4}
@@ -93,7 +93,7 @@ export class TaskManager extends React.Component<TaskProps, TaskManagerState> {
                         onChange={(e) => { this.emptyTask.rounds = parseInt(e.target.value, 10); }}
                     /></div><div>
                     <label className="label">RoundDuration (seconds)</label>
-                    <input
+                    <input className="fancy"
                         type="number"
                         min={0}
                         max={25}
@@ -101,7 +101,7 @@ export class TaskManager extends React.Component<TaskProps, TaskManagerState> {
                         onChange={(e) => { this.emptyTask.roundDuration = parseInt(e.target.value, 10); }}
                     /></div><div>
                     <label className="label">InterRoundBreak (seconds)</label>
-                    <input
+                    <input className="fancy"
                         type="number"
                         min={3}
                         max={5}
@@ -109,14 +109,14 @@ export class TaskManager extends React.Component<TaskProps, TaskManagerState> {
                         onChange={(e) => { this.emptyTask.interRoundBreak = parseInt(e.target.value, 10); }}
                     /></div><div>
                     <label className="label">PostTaskBreak (seconds)</label>
-                    <input
+                    <input className="fancy"
                         type="number"
                         min={15}
                         max={30}
                         defaultValue={this.emptyTask.postTaskBreak.toString()}
                         onChange={(e) => { this.emptyTask.postTaskBreak = parseInt(e.target.value, 10); }}
                     />
-                    <button onClick={() => this.addNewTask()}
+                    <button className="fancy" onClick={() => this.addNewTask()}
                     >+</button>
                 </div></div>);
     }
@@ -125,7 +125,7 @@ export class TaskManager extends React.Component<TaskProps, TaskManagerState> {
         return (
             <div>
                 <h3>Click the button to add a new task</h3>
-                <button onClick={() => this.addTask()}>Add Task</button>
+                <button className="fancy" onClick={() => this.addTask()}>Add Task</button>
                 {
                     this.state && this.state.addingTask && this.editTask()
                 }
